@@ -1,5 +1,5 @@
 import streamlit as st
-from datetime import datetime
+from datetime import datetime, time
 
 # ─── CONSTANTES ───────────────────────────────────────────────────────────────
 
@@ -69,7 +69,7 @@ with col2:
 if max_real < meta_pzh:
     st.warning(f"El máximo real ({max_real:.0f}) es menor a la meta ({meta_pzh:.0f}). Verifica los datos.")
 
-hora_input = st.time_input("Hora actual", value=datetime.now().time())
+hora_input = st.time_input("Hora actual", value=time(0, 0))
 
 col3, col4 = st.columns(2)
 with col3:
